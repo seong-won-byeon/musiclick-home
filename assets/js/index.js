@@ -30,24 +30,14 @@ gsap.defaults({
 
 
 
-// 서비스 문의 클릭시
-// $('#goContact').on('click', function (e) {
-//   e.preventDefault(); 
-//   const targetOffset = $('#contact').offset().top;
-
-//   $('html, body').animate({
-//     scrollTop: targetOffset
-//   }, 1000); 
-// });
-
-
-
-
 
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
 window.addEventListener('load', () => {
-  document.querySelector('.marquee01').style.animationPlayState = 'running';
-  document.querySelector('.marquee02').style.animationPlayState = 'running';
+  const bubble = document.querySelectorAll('.speech-bubble');
+
+  // document.querySelector('.marquee01').style.animationPlayState = 'running';
+  // document.querySelector('.marquee02').style.animationPlayState = 'running';
+
 });
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
 
@@ -66,7 +56,6 @@ const imageTl = gsap.timeline({
     start: 'top top',
     end: 'bottom bottom',
     // scroller: '.lenis-wrap',
-    markers: true,
     scrub: true,
     onUpdate: (self) => {
       const progress = self.progress; 
@@ -99,20 +88,9 @@ const visaulTl = gsap.timeline({
     start: 'bottom 80%',
     end: 'bottom top', // 약 100% 스크롤 거리 확보
     scrub: true,
-    markers:true,
     // scroller: '.lenis-wrap',
   }
 });
-
-// const visaulTl = gsap.timeline({
-//   scrollTrigger:{
-//     trigger:'.sc-video .sticky-wrapper',
-//     start:"50% 0%",
-//     end:"100% 100%",
-//     scrub: true,
-//     scroller: '.lenis-wrap',
-//   },
-// })
 visaulTl.fromTo(
   '.sc-video',
   { autoAlpha: 0 },
@@ -134,8 +112,8 @@ visaulTl.fromTo(
 visaulTl.fromTo(
   '.sc-video .video-area .content',
   {
-    width: "65%",
-    height: "65%",
+    width: "50%",
+    height: "50%",
     borderRadius: "80px",
     zIndex: 1
   },

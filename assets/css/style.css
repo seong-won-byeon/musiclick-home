@@ -447,7 +447,7 @@ main {
     position: relative;
 }
 .sc-video .sticky-wrapper {
-    height: 400vh;
+    height: 200vh;
 }
 .sc-video .sticky {
     position: sticky;

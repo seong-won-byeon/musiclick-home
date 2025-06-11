@@ -136,7 +136,7 @@ visaulTl.fromTo(
   {
     width: "65%",
     height: "65%",
-    borderRadius: "20px",
+    borderRadius: "80px",
     zIndex: 1
   },
   {

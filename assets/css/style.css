@@ -62,8 +62,6 @@ header nav a {
 }
 
 main {
-    /* margin-top: 103px; */
-    /* margin-top: 56px; */
     text-align: center;
 }
 
@@ -83,7 +81,7 @@ main {
     font-size: 48px;
     font-weight: var(--font-extrabold);
     color: #262626;
-    line-height: 150%;
+    line-height: 140%;
     letter-spacing: -0.48px;
 }
 .hero .desc {
@@ -93,34 +91,68 @@ main {
     line-height: 160%;
     letter-spacing: -0.08px;
     font-weight: var(--font-medium);
-    margin-top: 28px;
+    margin-top: 20px;
 }
-
 
 .marquee-area {
     overflow: hidden;
     position: relative;
     width: 100%;
     max-width: 1280px;
-    margin-top: 64px;
-    border: 1px solid blue;
+    padding-top: 66px;
 }
-.speech-bubble {
+/* 밀픙산 애니메이션 */
+@keyframes bounce {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    10% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(0.95);
+    }
+    30% {
+      transform: scale(1.05);
+    }
+    40% {
+      transform: scale(0.98);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    60% {
+      transform: scale(1);
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .speech-bubble {
     position: absolute;
-    top: 45px;
+    top: 21px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #262626;
     color: #A2F33F;
     border-radius: 100px;
-    width: 104px;
-    height: 26px;
+    width: 118px;
+    height: 28px;
     font-weight: var(--font-semibold);
     font-size: 14px;
     letter-spacing: -0.06px;
-    animation: shake 0.6s ease-in-out infinite alternate-reverse;
-}
+    animation: bounce 2.5s ease-out forwards;
+  }
+  
+  
 /* 말풍선 꼬리 (왼쪽 아래 기준) */
 .speech-bubble::after {
   content: "";
@@ -138,18 +170,19 @@ main {
 }
 .bubble2 {
     right: 240px;
-    width: 120px;
+    width: 135px;
     color: #262626;
     background: #A2F33F;
 }
 .bubble2::after {
   border-color: #A2F33F transparent transparent transparent;
 }
-/* 흔들리는 애니메이션 */
-@keyframes shake {
-	0% {margin-top: 0px;}
-	100% {margin-top: 5px;}
-  }
+
+  
+
+
+
+
 .marquee {
     width: 100%;
 }
@@ -189,20 +222,18 @@ main {
     overflow: hidden;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.18);
 }
-
-
   
 .logo-wrap img {
     height: 100%;
 }
 .marquee01 {
     animation: marquee1 40s linear infinite;
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 .marquee02 {
     margin-top: 17px;
     animation: marquee2 40s linear infinite;
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 @keyframes marquee1 {
   0% {
@@ -600,7 +631,7 @@ footer address {
 
 @media (max-width:1440px) {
     .sc-visual {
-        padding-top: 136px;
+        padding-top: 120px;
         justify-content: flex-start;
     }
     .sc-how .col-left {

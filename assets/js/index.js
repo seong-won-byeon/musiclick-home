@@ -32,13 +32,29 @@ gsap.defaults({
 
 
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
-window.addEventListener('load', () => {
-  const bubble = document.querySelectorAll('.speech-bubble');
+function runBubblesLoop() {
+  const bubbles = document.querySelectorAll('.speech-bubble');
 
-  // document.querySelector('.marquee01').style.animationPlayState = 'running';
-  // document.querySelector('.marquee02').style.animationPlayState = 'running';
+  // 순차적으로 .show 추가
+  bubbles.forEach((bubble, index) => {
+    setTimeout(() => {
+      bubble.classList.add('show');
+    }, index * 100);
+  });
 
-});
+  // 3초 애니메이션 + 2초 대기 후 .show 제거
+  setTimeout(() => {
+    bubbles.forEach(bubble => {
+      bubble.classList.remove('show');
+    });
+
+    // 2초 대기 후 재실행
+    setTimeout(runBubblesLoop, 2000);
+  }, 3000); // 애니메이션 지속 시간만큼 기다림
+}
+
+window.addEventListener('DOMContentLoaded', runBubblesLoop);
+
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
 
 
@@ -82,6 +98,15 @@ function activateStep(index) {
 
 
 
+// const rewardVideo = document.getElementById('rewardVideo');
+
+const video = document.getElementById("rewardVideo");
+video.addEventListener("ended", () => {
+  video.currentTime = 0;
+  video.play();
+});
+
+
 const visaulTl = gsap.timeline({
   scrollTrigger: {
     trigger: '.sc-how',
@@ -89,6 +114,10 @@ const visaulTl = gsap.timeline({
     end: 'bottom top', // 약 100% 스크롤 거리 확보
     scrub: true,
     // scroller: '.lenis-wrap',
+    onEnter: () => {
+      video.currentTime = 0; 
+      video.play();         
+    }
   }
 });
 visaulTl.fromTo(
@@ -125,6 +154,14 @@ visaulTl.fromTo(
   },
   0 // 같은 시간에 시작
 );
+
+
+// gsap.to(".hero .bubble1", { duration: 3, repeat: -1, yoyo: true});
+// gsap.to(".hero .bubble2", { duration: 1, scale: 1.2, repeat: -1, yoyo: true});
+// gsap.to(".hero .bubble3", { duration: 3, repeat: -1, yoyo: true});
+// gsap.to(".hero .ico-star", { duration: 2.5, scale: 0.5, rotate: 720, repeat: -1, yoyo: true});
+// gsap.to(".hero .ico-eye", { duration: 5, rotate: 720, repeat: -1});
+// gsap.to(".hero .ico-arrow", { duration: 1.5, width: '100%', repeat: -1});
 
 
 

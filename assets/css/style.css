@@ -91,98 +91,138 @@ main {
     line-height: 160%;
     letter-spacing: -0.08px;
     font-weight: var(--font-medium);
-    margin-top: 20px;
+    margin-top: 12px;
 }
-
 .marquee-area {
     overflow: hidden;
     position: relative;
     width: 100%;
     max-width: 1280px;
-    padding-top: 66px;
+    padding-top: 83px;
+    padding-bottom: 80px;
 }
 /* 밀픙산 애니메이션 */
 @keyframes bounce {
     0% {
-      transform: scale(0);
+      transform: scale(0) rotate(0deg);
       opacity: 0;
     }
     10% {
-      transform: scale(1.4);
+      transform: scale(1.4) rotate(0deg);
       opacity: 1;
     }
+    15% {
+      transform: scale(1) rotate(5deg); 
+    }
+
     20% {
-      transform: scale(0.95);
+        transform: scale(1) rotate(-4.5deg);
+      }
+    25% {
+      transform: scale(1) rotate(4.5deg);
     }
     30% {
-      transform: scale(1.05);
+      transform: scale(1) rotate(-3.5deg);
     }
-    40% {
-      transform: scale(0.98);
+    35% {
+      transform: scale(1) rotate(3.5deg);
     }
-    50% {
-      transform: scale(1.02);
+    42% {
+      transform: scale(1) rotate(-3deg);
+    }
+    48% {
+      transform: scale(1) rotate(3deg);
+    }
+    54% {
+      transform: scale(1) rotate(-2deg);
     }
     60% {
-      transform: scale(1);
+      transform: scale(1) rotate(2deg);
     }
-    80% {
-      opacity: 1;
+    66% {
+      transform: scale(1) rotate(-1deg);
     }
+    72% {
+      transform: scale(1) rotate(1deg);
+    }
+    80%{
+      transform: scale(1) rotate(0.25deg);
+    } 
     100% {
+      transform: scale(1) rotate(0.25deg);
       opacity: 1;
-      transform: scale(1);
     }
-  }
+}
+
   
-  .speech-bubble {
-    position: absolute;
-    top: 21px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #262626;
-    color: #A2F33F;
-    border-radius: 100px;
-    width: 118px;
-    height: 28px;
-    font-weight: var(--font-semibold);
-    font-size: 14px;
-    letter-spacing: -0.06px;
-    animation: bounce 2.5s ease-out forwards;
-  }
-  
-  
+.speech-bubble {
+  opacity: 1;
+  position: absolute;
+  top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #262626;
+  color: #A2F33F;
+  border-radius: 100px;
+  width: 153px;
+  height: 36px;
+  padding-top: 2px;
+  font-weight: var(--font-semibold);
+  font-size: 18px;
+  letter-spacing: -0.09px;
+}
+
+/* 공통 애니메이션 클래스 */
+  .speech-bubble.show {
+  animation: bounce 3s ease-out forwards;
+}
+
 /* 말풍선 꼬리 (왼쪽 아래 기준) */
 .speech-bubble::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  margin-top: -3px;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 10px 10px 0 5px;
-  border-radius: 3px;
+  width: 15px;
+  height: 12px;
+  background: #262626;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  /* border-width: 15px 8px 0 8px;
+  border-radius: 50px;
   border-style: solid;
-  border-color: #262626 transparent transparent transparent;
+  border-color: #262626 transparent transparent transparent; */
 }
 .bubble1 {
     left: 170px;
 }
 .bubble2 {
     right: 240px;
-    width: 135px;
+    width: 176px;
     color: #262626;
     background: #A2F33F;
 }
 .bubble2::after {
-  border-color: #A2F33F transparent transparent transparent;
+    background: #A2F33F;
 }
-
-  
-
-
-
-
+.bubble3 {
+    top: unset;
+    bottom: 20px;
+    right: 0;
+    left: 50%;
+    width: 105px;
+    background: #262626;
+    color: #A2F33F;
+}
+.bubble3::after {
+    top: auto;
+    bottom: 100%;
+    margin-top: 0;
+    margin-bottom: -3px;
+    transform: translateX(-50%) rotate(180deg);
+}
 .marquee {
     width: 100%;
 }

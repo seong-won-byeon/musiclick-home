@@ -54,7 +54,6 @@ function runBubblesLoop() {
 }
 
 window.addEventListener('DOMContentLoaded', runBubblesLoop);
-
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
 
 

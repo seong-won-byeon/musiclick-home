@@ -34,6 +34,7 @@ header {
     border-radius: 16px;
     padding: 8px;
     width: 640px;
+    height: 55px;
     margin: 0 auto;
     z-index: 99999;
 }
@@ -42,13 +43,21 @@ header .inner {
     justify-content: space-between;
     align-items: center;
     padding: 0;
+    height: 100%;
 }
 header .logo {
-    width: 102px;
-    margin-left: 8px;
+    height: 100%;
 }
 header .logo a {
-    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+    padding: 0 4px;
+}
+header .logo a img {
+    width: 102px;
 }
 header nav {
     background: #fff;

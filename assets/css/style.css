@@ -622,6 +622,7 @@ main {
 .sc-contact .address {
     margin-top: 12px;
     padding-left: 8px;
+    text-align: left;
 }
 .sc-contact .address .comp {
     font-size: 18px;

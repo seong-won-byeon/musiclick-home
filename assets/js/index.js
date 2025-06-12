@@ -32,28 +32,27 @@ gsap.defaults({
 
 
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
+
 function runBubblesLoop() {
   const bubbles = document.querySelectorAll('.speech-bubble');
 
-  // 순차적으로 .show 추가
   bubbles.forEach((bubble, index) => {
     setTimeout(() => {
+      // 클래스 제거 후 강제 리렌더 → 다시 animate 클래스 추가
+      bubble.classList.remove('show');
+      void bubble.offsetWidth;
       bubble.classList.add('show');
-    }, index * 100);
+    }, index * 100); // 각 말풍선 0.1초 간격으로 등장
   });
 
-  // 3초 애니메이션 + 2초 대기 후 .show 제거
-  setTimeout(() => {
-    bubbles.forEach(bubble => {
-      bubble.classList.remove('show');
-    });
-
-    // 2초 대기 후 재실행
-    setTimeout(runBubblesLoop, 2000);
-  }, 3000); // 애니메이션 지속 시간만큼 기다림
+  // 전체 주기: 3초 애니메이션 + 3초 대기 = 6초 후 반복
+  setTimeout(runBubblesLoop, 6000);
 }
 
-window.addEventListener('DOMContentLoaded', runBubblesLoop);
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(runBubblesLoop, 200); // 페이지 로드 후 3초 뒤 첫 실행
+});
+
 // --------------- 메인 앨범 무한 슬라이드 --------------- 
 
 

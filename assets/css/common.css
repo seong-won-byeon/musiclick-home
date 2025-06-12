@@ -104,6 +104,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: 'Pretendard';
   line-height: 1;
   overscroll-behavior: contain;
   height: 100%;

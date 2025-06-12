@@ -21,6 +21,7 @@
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
+    padding: 0 40px;
 }
 
 
@@ -40,6 +41,7 @@ header .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 header .logo {
     width: 102px;
@@ -114,7 +116,6 @@ main {
     15% {
       transform: scale(1) rotate(5deg); 
     }
-
     20% {
         transform: scale(1) rotate(-4.5deg);
       }
@@ -153,6 +154,7 @@ main {
       opacity: 1;
     }
 }
+
 
   
 .speech-bubble {
@@ -382,7 +384,6 @@ main {
     height: 250vh; 
 }
 .sc-how .sticky {
-    padding-left: 40px;
     position: sticky;
     top: 0;
     height: 100vh;
@@ -397,7 +398,6 @@ main {
     gap: 60px;
     height: 934px;
     min-height: 536px;
-    border: 1px solid #000;
 }
 .sc-how .col-left {
     height:90%;
@@ -576,11 +576,11 @@ main {
 
 
 .sc-contact {
-    padding: 72px 0 84px 20px;
-    text-align: left;
+    padding: 72px 0 84px 0;
     border: 1px solid #000;
 }
 .sc-contact h3 {
+    text-align: left;
     font-size: 32px;
     font-weight: var(--font-bold);
     color: #262626;
@@ -601,11 +601,18 @@ main {
     width: 233px;
     height: 80px;
 }
+.sc-contact .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid #000; */
+}
 .sc-contact .map { 
     margin-top: 32px;
     background: #333333;
     border-radius: 17px;
     padding: 21px 22px;
+    max-width: 1200px;
 }
 .sc-contact .map iframe {
     width: 100%;
@@ -675,8 +682,13 @@ footer address {
         justify-content: flex-start;
     }
     .sc-how .col-left {
-        height:55%;
-        border: 1px solid #000;
+        height: 60%;
+    }
+    .sc-how .steps {
+        width: 388px;
+    }
+    .sc-how .flex-cont {
+        margin-top: 28px;
     }
     .sc-how .col-right {
         height: 100%;

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="naver-site-verification" content="587187601228484e01b3cccde91b2c954a4f9f7c"/>
-    <meta property="og:title" content="뮤직클릭몇줄까지 가능한지 확인차원뮤직클릭몇줄까지 가능한지 확인차원뮤직클릭몇줄까지 가능한지 확인차원뮤직클릭몇줄까지 가능한지 확인차원"/>
-    <meta name="description" content="뮤직클릭은 뮤직클릭몇줄까지 가능한지 확인차원뮤직클릭몇줄까지 가능한지 확인차원뮤직클릭몇줄까지 가능한지 확인차원뮤직클릭몇줄까지 가능한지 확인차원"/>
-    <meta property="og:description" content="ㄴㅇㄹㄴㅇㄹㄴㅇㄹ">
-    <meta property="og:site_name" content="뮤직클릭">
-    <!-- <meta property="og:image" content="https://jamonglab.com/assets/img/meta.png"/> -->
-    <meta name="robots" content="ALL">
-    <title>뮤직클릭(MusiClick)</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./assets/js/index.js" defer></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
-    <!-- <link rel="shortcut icon" href="./assets/img/favicon.png"> -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="naver-site-verification" content="587187601228484e01b3cccde91b2c954a4f9f7c"/>
+        <meta property="og:title" content="뮤직클릭(MusiClick)" />
+        <meta name="description" content="음악감상이 재테크가 되는 새로운 앱테크" />
+        <meta property="og:description" content="음악감상이 재테크가 되는 새로운 앱테크" />
+        <meta property="og:site_name" content="뮤직클릭(MusiClick)" />
+        <meta property="og:image" content="https://seong-won-byeon.github.io/musiclick-home/musiclick-og.png"/>
+        <meta name="robots" content="ALL"/>
+        <title>뮤직클릭(MusiClick)</title>
+        <link rel="stylesheet" href="./assets/css/style.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="./assets/js/index.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+        <link rel="shortcut icon" href="./assets/img/favicon.png">
+    </head>
 <body>
     <!-- <div class="lenis-wrap">
         <div class="inner-lenis"> -->
@@ -43,6 +43,9 @@
                             </div>
                             <div class="speech-bubble bubble2">
                                 음원듣고 리워드 받기
+                            </div>
+                            <div class="speech-bubble bubble3">
+                                @퇴근할때
                             </div>
                             <div class="marquee">
                               <div class="marquee-content marquee01">
@@ -228,7 +231,7 @@
                                     다양하게 즐겨보세요</p>
                                 <div class="video-area">
                                     <div class="content">
-                                        <video src="./assets/img/video_1.mp4"  muted autoplay loop playsinline></video>
+                                        <video src="./assets/img/video_1.mp4" muted loop playsinline id="rewardVideo"></video>
                                         <!-- <video src="./assets/img/video_2.mp4" muted></video>
                                         <video src="./assets/img/video_3.mp4" muted></video> -->
                                     </div>

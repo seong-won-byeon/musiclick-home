@@ -506,7 +506,6 @@ main {
     height: 100vh;
     padding: 84px 40px;
     background: rgba(38, 38, 38,0.97);
-
 }
 .sc-video .sticky p {
     position: absolute;
@@ -654,6 +653,15 @@ footer address {
     margin-top: 20px;
 }
 
+footer .link-cont {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-decoration: underline;
+}
+
 
 
 @media (max-width:1440px) {
@@ -683,3 +691,57 @@ footer address {
 
     
 }
+
+
+
+
+
+/* 이용약관,개인정보처리방침 */
+.container {max-width: 1280px;text-align: center;margin: 80px auto;padding: 40px;}
+.container .sub_slogan {display: flex;justify-content: space-between;align-items: center;}
+.container .sub_slogan > h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight:700; 
+    color:#040303; 
+}
+.privacy_text_box,
+.use_text_box {padding:0; margin:0;color: #333;text-align: left;}
+
+.privacy_fin,
+.use_fin {font-size:16px; line-height:26px;}
+.privacy_fin.fir {
+    padding-top: 60px;
+}
+
+.privacy_fin h2,
+.use_fin h2 {
+    font-size:18px; line-height:26px; font-weight:600; letter-spacing:-1px; margin:60px 0 20px;}
+
+
+
+.use_fin table,
+.privacy_fin table {width:100%; max-width:1200px; border:solid 1px #ccc;  border-right:none; margin-top:20px;table-layout: fixed;}
+
+.use_fin th,
+.privacy_fin th {background-color:#eee; font-size:16px;  font-weight:600; padding:10px 0; border-right:solid 1px #ccc;}
+
+.use_fin td,
+.privacy_fin td {font-size:15px;  font-weight:500; padding:10px; border-right:solid 1px #ccc;word-break: break-all;text-align: center;}
+
+.privacy_fin p,
+.use_fin p {margin:10px 0 10px 20px;}
+
+.privacy_text_box>div>div {display: none;}
+.privacy_text_box>div>div.active {display: block;}
+
+.use_text_box>div>div {display: none;}
+.use_text_box>div>div.active {display: block;}
+
+
+@media (max-width: 765px) {
+    .container .sub_slogan {flex-direction: column;row-gap: 20px;}
+    .container {padding: 20px;}
+    .container .sub_slogan>h1 {font-size: 30px;}
+}
+

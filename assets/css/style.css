@@ -721,13 +721,18 @@ footer .link-cont {
 
 
 .use_fin table,
-.privacy_fin table {width:100%; max-width:1200px; border:solid 1px #ccc;  border-right:none; margin-top:20px;table-layout: fixed;}
+.privacy_fin table {width:100%; max-width:1200px; border:solid 1px #ddd;  border-right:none; margin-top:20px;table-layout: fixed;}
 
 .use_fin th,
-.privacy_fin th {background-color:#eee; font-size:16px;  font-weight:600; padding:10px 0; border-right:solid 1px #ccc;}
+.privacy_fin th {background-color:#eee; font-size:16px;  font-weight:600; padding:10px 0; border-right:solid 1px #ddd;}
 
 .use_fin td,
-.privacy_fin td {font-size:15px;  font-weight:500; padding:10px; border-right:solid 1px #ccc;word-break: break-all;text-align: center;}
+.privacy_fin td {font-size:15px;  font-weight:500; padding:10px; border-right:solid 1px #ddd;word-break: break-all;text-align: center;}
+
+
+.privacy_fin tr {
+    border-bottom: 1px solid #ddd;
+}
 
 .privacy_fin p,
 .use_fin p {margin:10px 0 10px 20px;}
